@@ -1,6 +1,5 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import BooksAppStatic from './AppStatic'
 import * as BooksApi from './BooksAPI'
 import Shelf from './Shelf'
 import Search from './Search'
@@ -91,9 +90,6 @@ class BooksApp extends React.Component {
               to='/search'
             > <p>Add a book </p></Link>
           </div>
-        )} />
-        <Route exact path='/static' render={() => (
-          <BooksAppStatic />
         )} />
         <Route exact path='/search' render={() => (
           <Search search={this.searchBooks} res={this.state.searchedBooks} update={this.update} clear={this.clearSearchedBooks}/>
