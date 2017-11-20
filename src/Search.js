@@ -56,7 +56,7 @@ const SearchBooksBar = ({ search, query, clear }) => (
         history.push('/')
       }}>Close</a>
       <div className="search-books-input-wrapper">
-        <input
+        <input // FIXME: Sometimes user can type in too fast, making lots of server requests which is not good. A solution for that is using Debounce https://www.npmjs.com/package/react-throttle
           type="text"
           placeholder="Search by title or author"
           value={query}

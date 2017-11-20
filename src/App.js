@@ -8,11 +8,14 @@ import update from 'immutability-helper';
 import './App.css'
 
 class BooksApp extends React.Component {
-  state = {
-    currentlyReading: [],
-    wantToRead: [],
-    read: [],
-    searchedBooks: [],
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentlyReading: [],
+      wantToRead: [],
+      read: [],
+      searchedBooks: [],
+    }
   }
 
   componentDidMount() {
