@@ -1,6 +1,6 @@
 # MyReads Project
 
-This is my implementation of the MyReads Project for Udacity's React Fundamentals course.
+This repo builds a Book Tracking App that allows you to select and categorize books you have read, are currently reading, or want to read.
 
 ## Install and launch
 

@@ -6,25 +6,28 @@ import './App.css'
 
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: '',
+    }
+  }
+
   static propTypes = {
     search: PropTypes.func.isRequired,
     res: PropTypes.array.isRequired,
     update: PropTypes.func.isRequired,
   }
 
-  state = {
-    query: ''
-  }
-
   searchQuery = (query) => {
     const trimQuery = query.trim()
     if (trimQuery) {
       this.setState(
-        { query: query.trim() },
+        { query: trimQuery },
         () => this.props.search(this.state.query)
       )
     } else {
-      this.setState({ query: query.trim() })
+      this.setState({ query: trimQuery })
     }
   }
 
@@ -60,7 +63,7 @@ const SearchBooksBar = ({ search, query, clear }) => (
           type="text"
           placeholder="Search by title or author"
           value={query}
-          onChange={(event) => search(event.target.value)}
+          onChange={(event) => search(event.target.value) }
         />
 
       </div>
