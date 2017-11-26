@@ -2,6 +2,8 @@
 
 This repo builds a Book Tracking App that allows you to select and categorize books you have read, are currently reading, or want to read.
 
+[This is what it looks like](https://voxvocis.github.io/ud-my-reads/)
+
 ## Install and launch
 
 To get started developing right away:
